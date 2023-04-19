@@ -22,3 +22,9 @@ services:
       - freecodecamp
 networks:
   freecodecamp:
+
+# version: '3.8': 告訴 Docker Compose 使用哪個版本的語法。
+# services: 定義了這個 Compose 檔案所描述的服務。在這個 Compose 檔案中，定義了兩個服務：dev-db 和 test-db。
+# dev-db: 這個服務使用了 postgres:13 的 Docker 映像，代表這個容器將運行 PostgreSQL 13 版本。此服務的映像將使用 ports 屬性將容器的 5432 端口映射到主機的 5434 端口，以便從主機上訪問資料庫。該服務還定義了 environment 屬性，以設置 PostgreSQL 的使用者名稱、密碼和資料庫名稱。
+# test-db: 與 dev-db 服務的配置相同，但使用的是另一個端口 5435。
+# networks: 定義了要使用的網路，freecodecamp 是一個自定義的網路名稱，允許兩個服務透過相同的網路進行通訊。
